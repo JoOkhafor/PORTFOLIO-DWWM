@@ -164,7 +164,9 @@ strong {
   font-weight: bolder;
 }
 
-
+.mb-2{
+  margin-bottom: 2.5rem;
+}
 
 .container,
 .container-fluid,
@@ -248,9 +250,9 @@ color: var(--primary);
 .dash{
   display: inline-block;
   height: 8px;
-  width: 8rem;
+  width: 6rem;
   background-color: var(--primary);
-  transform: translateY(-50%);
+  transform: translateY(-15px);
 
 }
 
@@ -355,6 +357,7 @@ display: block;
 }
 
 
+
 .hero__intro{
   padding-top: 1rem;
   padding-right:15px;
@@ -421,15 +424,100 @@ line-height: 1.6rem;
 
 
 /* About me section */
-
-.about .container{
-  padding: 10rem 0;
+.about{
   background-color: var(--bg-lighter);
 }
+.about .container{
+  padding: 6rem 0;
+  position:relative
+}
 .wrapper{
-  max-width: 600px;
+  max-width: 680px;
   margin: auto ;
 }
+
+.bg-pencils{
+  position: fixed;
+  display: inline;
+}
+.subtitle{
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  color: #212529;
+  margin-bottom: 1.5rem;
+}
+
+.abaout p{
+  text-align:justify;
+  word-break: break-all;
+}
+.bg-coffee{
+background-image: url("../img/coffee.png");
+background-size: 200px;
+background-repeat: no-repeat;
+position: absolute;
+top: 22%;
+left: 5%;
+width: 200px;
+height:100%;
+}
+
+.bg-pencils{
+  background-image: url("../img/boxofpencils.png");
+background-size: 250px;
+background-repeat: no-repeat;
+position: absolute;
+top: 22%;
+right: 8%;
+width: 250px;
+height:100%;
+}
+
+.bg-notepad{
+  background-image: url("../img/calepin.png");
+background-size: 400px;
+background-repeat: no-repeat;
+position: absolute;
+top: 34%;
+right: 0;
+width: 400px;
+height:100%;
+}
+
+.bg-compas{
+  background-image: url("../img/geometrycompas2.png");
+background-size: 60px;
+background-repeat: no-repeat;
+position: absolute;
+top: 52%;
+right: 19%;
+width: 60px;
+height:100%;
+}
+
+.services  .container, .about  .container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services  .container{
+ padding: 5rem 0;
+}
+
+.grid__row{
+  display: flex;
+}
+
+.grid-col-unit-6{
+  flex: 0 1 50%;
+}
+
+.service-box{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
 
 
 
@@ -496,7 +584,7 @@ line-height: 1.6rem;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    float: right;
+    margin: 0 0 0 auto;
     align-items: center;
    
   }
@@ -631,7 +719,6 @@ line-height: 1.6rem;
   position: relative;
   margin-left: 15%;
   flex: 1 1 50%;
-  float: right;
 
 }
 
