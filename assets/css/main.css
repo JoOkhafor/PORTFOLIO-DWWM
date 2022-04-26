@@ -119,6 +119,7 @@ h6, .h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  font-size: 1rem;
 }
 
 a {
@@ -514,10 +515,6 @@ height:100%;
   margin: 0 auto;
 }
 
-.services  .container{
- padding: 5rem 0;
-}
-
 
 .grid__row{
   display: flex;
@@ -527,22 +524,19 @@ height:100%;
   flex: 0 1 50%;
 }
 .service__description{
-  max-width: 80%;
   padding-top: 10%;
 }
 .service-box{
   margin-top: 4rem;
 }
 .services__cards{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: 
-  "design_and_prototype web_developpement app_developpement deployement";
-  gap: 10px;
+ display: flex;
 }
 .service__item{
+  flex: 0 1 25%;
   padding: 20px;
-  min-height:  280px ;
+  margin: auto 10px;
+  min-height:  260px ;
   align-content: flex-end;
   display: flex;
   flex-direction: column;
@@ -550,6 +544,7 @@ height:100%;
   color: var(--white);
   font-weight: 600;
   cursor: pointer;
+
 }
 
 .service__item img{
@@ -557,12 +552,9 @@ height:100%;
   width: 80px;
   margin-bottom: 1.2rem;
 }
-.service__item:first-child{
-  grid-area: design_and_prototype;
-}
+
 
 .service__item:nth-child(2){
-  grid-area: web_developpement;
   background-color: var(--primary);
 
 }
@@ -572,16 +564,10 @@ height:100%;
   display: block;
   
 }
-.service__item:nth-child(3){
-  grid-area: app_developpement;
-}
 
-.service__item:last-child{
-  grid-area: deployement;
-}
 
 .service__item:not(.service__item:nth-child(2)){
-  background-color:rgb(39, 39, 39);
+  background-color:#1C1B20;
 }
 .skills{
   position: relative;
@@ -601,7 +587,30 @@ height:100%;
   margin-top: 4rem;
 }
 
+.skills__list{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 8vh;
+}
+.skills__list .progress-bar{
+  flex: 0 1 calc(25% - 20px);
+height: 10px;
+width: 100%;
+background-color: #F3BFBF;
+margin: 3vh 10px;
+position: relative;
+}
+.skills__list .progress__fil{
+  height: 100%;
+  width: 10%;
+  background-color: #dd2d2d;
+}
 
+.progress__text{
+  position: absolute;
+  top:0;
+  transform: translateY(-100%);
+}
 .bg__ipad{
   background-image: url("../img/ipadpro.png");
   background-size: 400px;
@@ -861,12 +870,18 @@ width: auto;
   flex-wrap: wrap;
 }
 
+.companies__box img{
+height: 40%;
+width: 100%;
+}
 .companies__box .company{
   height: 150px;
   width: 150px;
   padding: 2rem;
   border: 1px solid black;
   border-collapse: collapse;
+  display: grid;
+  place-items: center;
 }
 .companies__box .h1{
   text-align: right;
@@ -883,11 +898,7 @@ width: auto;
 
 footer{
   padding: 5rem 0 0;
-  /* position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -999; */
+background-image: url("../img/footer-bg.png");
 }
 
 footer .conainer{
@@ -923,6 +934,12 @@ footer .mail__box a{
 
 .phone, .socials{
   flex: 0 1 50%;
+}
+
+.social__links a{
+ height: 25px;
+ width: 25px;
+ margin: 0 10px;
 }
 .phone h3{
   font-size: 2.5rem;
@@ -1087,6 +1104,12 @@ footer .mail__box a{
   .about .container{
     padding: 6rem 0;
   }
+
+  .services  .container{
+    padding: 5rem 0;
+   }
+
+
   
 }
 
@@ -1096,6 +1119,11 @@ footer .mail__box a{
  .conainer{
    margin: auto 15px
  }
+
+ .container {
+  padding-right: 1.2rem;
+  padding-left: 1.2rem;
+}
   .navbar{
     height: 80px;
     margin-bottom: 2rem;
@@ -1181,6 +1209,7 @@ footer .mail__box a{
 
 .about .container{
   padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 
@@ -1195,6 +1224,55 @@ footer .mail__box a{
 .main-title{
   width: 80%;
   margin-left: auto;
+}
+
+.subtitle{
+  font-size: 1.3rem;
+  line-height: 2.2rem;
+ font-weight: 600;
+}
+
+.about p{
+  font-size: 1.1rem;
+  position: relative;
+  z-index: 99;
+}
+.bg-pencils {
+  background-size: 33vw;
+  top: 33%;
+  right: 0;
+  width:33vw;
+  height: 32vw;
+}
+.bg-notepad{
+  background-size: 55vw;
+  top: 40%;
+  right: 0;
+  width: 55vw;
+  height: 78vw;
+}
+.bg-compas {
+  background-size: 10vw;
+  top: 52%;
+  right: 20%;
+  width: 10vw;
+  height: 39vw;
+}
+
+.services  .container{
+  padding-top: 5rem;
+ }
+.grid__row{
+  display: block;
+}
+
+  .service__description{
+    max-width:100%;
+  
+}
+
+.service__item{
+  flex: 0 1 calc(-50% - 20px);
 }
 
 }
