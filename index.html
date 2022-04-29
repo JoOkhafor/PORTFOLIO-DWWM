@@ -11,7 +11,8 @@
   <meta property="og:type" content="">
   <meta property="og:url" content="">
   <meta property="og:image" content="">
-  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="shortcut icon" href="assets/img/favicon.svg" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,32 +27,34 @@
     <header>
         <div class="navbar">
             <div class="logo">
-             <img src="assets/img/Logo.svg" alt="" srcset="">
+            <a href="index.html">
+                <img src="assets/img/Logo.svg" alt="" srcset="">
+            </a>
             </div>
             <input type="checkbox" id="mobileMenuToggle">
             <div class="navbar__social">
-                <a href="#" class="navbar__social--link">fb</a>
-                <a href="#" class="navbar__social--link">be</a>
-                <a href="#" class="navbar__social--link">ig</a>
+                <a href="https://www.facebook.com" class="navbar__social--link">fb</a>
+                <a href="https://www.behance.net/" class="navbar__social--link">be</a>
+                <a href="https://www.instagram.com" class="navbar__social--link">ig</a>
             </div>
             <nav class="navbar__top">
-                <a class="menu__nav" href="">Actuality</a>
+                <a class="menu__nav" href="index.html">Actuality</a>
                 <a href="#contact-modal" class="navbar__top--button">Contact me</a>
             </nav>
             <div class="navbar__mobileMenu">
                 <div class="mobileMennu__links">
-                    <a href="#">Index</a>
-                    <a href="#" class="active">About</a>
-                    <a href="#">Services</a>
-                    <a href="#co">Works</a>
+                    <a href="index.html">Index</a>
+                    <a href="#about" class="active">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#portfolia">Works</a>
                     <a href="#contact-modal">Contact</a>
                    <div class="mobileMenu__footer">
                     <span>Follow me</span>
                     <div class="social__links">
-                        <a href="http://"><img src="assets/img/facebook.svg" alt="" srcset=""></a>
-                        <a href="http://"><img src="assets/img/instagram.svg" srcset=""></a>
-                        <a href="http://"><img src="assets/img/behance.svg" alt="" srcset=""></a>
-                        <a href="http://"><img src="assets/img/dribble.svg" alt="" srcset=""></a>
+                        <a href="https://www.facebook.com"><img src="assets/img/facebook.svg" alt="" srcset=""></a>
+                        <a href="https://www.instagram.com"><img src="assets/img/instagram.svg" srcset=""></a>
+                        <a href="https://www.behance.net/"><img src="assets/img/behance.svg" alt="" srcset=""></a>
+                        <a href="https://dribbble.com"><img src="assets/img/dribble.svg" alt="" srcset=""></a>
                     </div>
                    </div>
                 </div>
@@ -83,14 +86,14 @@
                     <a href="#" class="link__unerdline ">Learn more</a>
                 </div>
                 <div class="hero__bottom--nav">
-                    <a class="link__unerdline display-md-none" href="http://">Latest work</a>
-                    <a class="link__unerdline display-md-none" href="http://">Case studies</a>
-                    <a class="link__unerdline mail__link" href="http://">hello@jookhafor.dev</a>
+                    <a class="hero__bottom--navlink display-md-none" href="#portfolio">Latest work</a>
+                    <a class="hero__bottom--navlink display-md-none" href="#services">services</a>
+                    <a class="hero__bottom--navlink" href="mail">hello@jookhafor.dev</a>
                 </div>
           
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <div class="bg-coffee"></div>
             <div class="bg-notepad"></div>
@@ -113,7 +116,7 @@
         </div>
     </section>
 
-<section class="services">
+<section class="services" id="services">
         <div class="container">
            <div class="grid__row">
             <div class="grid-col-unit-6">
@@ -134,7 +137,7 @@
                     <div class="service__item ">
                         <img src="assets/img/vector-design.png" alt="" srcset="">
                         <h5 class="service">Design<span></span> and prototype</h5>
-                        <p class="service__paragraph"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, iusto!</p>
+                       
                     </div>
                     <div class="service__item bg__primmary">
                         <img src="assets/img/keyboard.png" alt="" srcset="">
@@ -171,35 +174,35 @@
             </div>
             <div class="skills__list">
                       <div class="progress-bar">
-                          <div class="progress__fil"></div>
-                          <span class="progress__text">FIGMA</span>
+                          <div class="progress__fil figma"></div>
+                          <span class="progress__text ">FIGMA</span>
                       </div>
                       <div class="progress-bar">
-                          <div class="progress__fil"></div>
-                          <span class="progress__text">Adobe Xd</span>
+                          <div class="progress__fil xd"></div>
+                          <span class="progress__text ">Adobe Xd</span>
                       </div>
-                      <div class="progress-bar">
-                          <div class="progress__fil"></div>
+                      <div class="progress-bar display-md-none">
+                          <div class="progress__fil wp"></div>
                           <span class="progress__text">Wordpress</span>
                       </div>
-                      <div class="progress-bar">
-                          <div class="progress__fil"></div>
+                      <div class="progress-bar display-md-none">
+                          <div class="progress__fil html"></div>
                           <span class="progress__text">HTML/CSS</span>
                       </div>
-                      <div class="progress-bar">
-                          <div class="progress__fil"></div>
+                      <div class="progress-bar display-md-none">
+                          <div class="progress__fil angular"></div>
                           <span class="progress__text">Angular</span>
                       </div>
-                      <div class="progress-bar">
-                          <div class="progress__fil"></div>
+                      <div class="progress-bar display-md-none">
+                          <div class="progress__fil react"></div>
                           <span class="progress__text">React</span>
                       </div>
-                      <div class="progress-bar">
-                          <div class="progress__fil"></div>
+                      <div class="progress-bar display-md-none">
+                          <div class="progress__fil g-analytics"></div>
                           <span class="progress__text">Google analytics</span>
-                      </div>
-                      <div class="progress-bar">
-                          <div class="progress__fil"></div>
+                      </div> 
+                      <div class="progress-bar display-md-none">
+                          <div class="progress__fil web-d"></div>
                           <span class="progress__text">WEB DESIGN</span>
                       </div>
             </div>
@@ -275,7 +278,7 @@
         </div>
     </section>
 
-  <section class="portfolio">
+  <section class="portfolio" id="portfolio">
        
         <div class="container">
           
@@ -331,7 +334,7 @@
      <section class="clients">
         <div class="conainer">
             <div class="companies">
-                <h1 class="section__title ">I work<br> with them</h1>
+                <h1 class="section__title ">I work<br> <span class="title-primary">  with </span>them</h1>
                 <div class="companies__box">
                     <div class="company">
                         <img src="assets/img/hbo.png" alt="" srcset="">
@@ -404,7 +407,7 @@
       <div class="preloader__text">
           <span>Loading</span>
         <svg viewBox="0 0 3350 600">
-            <text x="30%" y="50%" fill="transparent" text-anchore="middle"> 
+            <text x="20%" y="50%" fill="transparent" text-anchore="middle"> 
                 Jo O'Khafor
             </text>
         </svg>
@@ -437,7 +440,7 @@
                 </div>
            </div>
         </div>
-        <a href="" class="contact__close">&times;</a>
+        <a href="#" class="contact__close">&times;</a>
     </div>
 </div>
 </html>

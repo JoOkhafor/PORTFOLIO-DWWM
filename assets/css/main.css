@@ -40,6 +40,7 @@ body {
 	height: 100%;
   font-family: 'Poppins', sans-serif;
 
+
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -47,12 +48,12 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #fce3e3; 
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+  background:#f34646; 
 }
 
 /* Handle on hover */
@@ -250,10 +251,10 @@ strong {
 }
 
 #loader{
-  width: 80%;
+  width: 100%;
 }
 .preloader__text span{
- font-size: 3rem;
+ font-size: 2rem;
  margin-bottom: 2rem;
  font-weight: 200;
  letter-spacing: .5rem;
@@ -311,11 +312,33 @@ svg text{
   flex: 0 1 33.3333%;
 }
 
-.navbar__social
-{text-align: center;
+.navbar__social {
+    text-align: center;
     z-index: 8;}
 
-
+    .menu__nav{
+      display: inline-block;
+      position: relative;
+    }
+ 
+    .menu__nav:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--primary);
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    
+    .menu__nav:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+       
 .logo{
   font-size: 1.3rem;
   font-weight: 600;
@@ -323,7 +346,7 @@ svg text{
 }
 
 .section__title{
-  font-size: 5rem;
+  font-size: max(4.5vw, 4vh);
   color: var(--dark);
   font-weight: 800;
   line-height: 5rem;
@@ -345,7 +368,10 @@ color: var(--primary);
 #mobileMenuToggle{
   display: none;
 }
-
+header{
+  z-index: 99;
+  position: relative;
+}
 .navbar__mobileMenu{
   width: 100%; 
   position: fixed;
@@ -380,7 +406,12 @@ color: var(--primary);
     z-index: 99;
 
 }
-
+.navbar__social a{
+  transform: scale(1);
+}
+.navbar__social a:hover{
+  color: var(--primary);
+}
 
 .navbar__mobileMenuBar .menuBar{
         width: 30px;
@@ -449,6 +480,8 @@ display: block;
 
 .hero{
   margin: 0 0 0 auto;
+  cursor: url("../img/portfolio-1.jpeg");
+
 }
 .hero__title--name{
   font-weight: 900;
@@ -495,9 +528,59 @@ line-height: 1.6rem;
 
 .hero__intro .link__unerdline::before{
   width: 40%;
+  transition: all .3s;
 }
 
 
+.hero__bottom--navlink {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+  padding: 0 1px;
+  transition: color ease 0.3s;
+  z-index: 2;
+  line-height: 1.3;
+}
+
+.hero__bottom--navlink::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 10%;
+    transform: translateY(5px);
+    left: 0;
+    bottom: 0;
+    background-color:var(--primary);
+    transition: all ease 0.3s;
+  }
+
+.hero__bottom--navlink:hover {
+    color: white;
+  }
+
+.hero__bottom--navlink:hover::after {
+      height:calc(100% + 5px);
+    }
+
+
+
+
+.hero__bottom--nav .link__unerdline{
+  display: inline-block;
+  padding: 0 1px;
+  transition: color ease 0.3s
+}
+
+
+
+
+
+
+.hero__intro .link__unerdline:hover::before{
+  width: 100%;
+}
 .hero__intro h4{
   font-size: 1.9! important;
   font-weight: 800;
@@ -529,6 +612,8 @@ line-height: 1.6rem;
 .about{
   background-color: var(--bg-lighter);
   background-image: url(assets/img/coffee.png);
+  overflow: hidden;
+
 }
 .about .container{
   position:relative
@@ -621,8 +706,12 @@ height:100%;
 .grid-col-unit-6{
   flex: 0 1 50%;
 }
+
+
+
 .service__description{
   padding-top: 10%;
+  cursor: url("../img/home_cursor.png") 16 0,auto;
 }
 .service-box{
   margin-top: 4rem;
@@ -639,6 +728,7 @@ height:100%;
   color: var(--white);
   font-weight: 600;
   cursor: pointer;
+  transition: all ;
 }
 
 .service__item img{
@@ -681,11 +771,15 @@ height:100%;
 }
 
 .service__paragraph{
-  display: none
+  display: none;
+  position: relative;
+  z-index: 3;
+
 }
 
-.service__item:hover {
+.service__item:hover .service__paragraph{
   display: block;
+  color: var(--white);
 }
 .skills{
   position: relative;
@@ -712,8 +806,29 @@ position: relative;
 }
 .skills__list .progress__fil{
   height: 100%;
-  width: 10%;
   background-color: #dd2d2d;
+}
+
+.figma{
+  width: 80%;
+}
+.xd{
+  width: 60%;
+}
+.wp{
+  width: 90%;
+}
+.html{
+  width: 96%;
+}
+.angular{
+  width: 70%;
+}
+.g-analytics{
+  width: 55%;
+}
+.web-d{
+  width: 88%;
 }
 
 .progress__text{
@@ -844,6 +959,7 @@ height: auto;
 
 .testimonials{
   padding: 5rem 0;
+  position: relative;
 }
 .testimonials .title{
   margin-bottom: 5rem;
@@ -872,7 +988,7 @@ height: auto;
 
 .testimonial p{
   line-height: 1.5;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .testimonial h5{
@@ -899,6 +1015,12 @@ display: inline-block;
   top: 0;
   bottom: 0;
 }
+
+.testimonial .company__name{
+  font-weight: 600;
+  font-size: 1rem;
+}
+
 
 .clients{
   background-color: var(--bg-lighter);
@@ -941,6 +1063,24 @@ max-width: 80%;
   display: grid;
   place-items: center;
 }
+
+.companies__box .company:nth-of-type(4){
+  border-right:0;
+}
+
+.companies__box .company:nth-of-type(3),
+.companies__box .company:nth-of-type(2){
+  border-right:0;
+  border-bottom: 0;
+}
+.companies__box .company:nth-of-type(1){
+  border-bottom:0;
+}
+
+.companies__box .company:nth-of-type(7),
+.companies__box .company:nth-of-type(6){
+  border-right:0;
+}
 .companies__box .h1{
   text-align: right;
 }
@@ -957,6 +1097,7 @@ max-width: 80%;
 footer{
   padding: 5rem 0 0;
 background-image: url("../img/footer-bg.png");
+cursor: url("../img/Logo.svg") ;
 }
 
 footer .conainer{
@@ -1132,6 +1273,29 @@ padding-left: 2rem;
     background-position: center;
      
 }
+
+.contact__me a{
+  color: var(--dark);
+  font-weight: 600;
+  position: relative;
+}
+
+.contact__me a::before{
+  position: absolute;
+  content: '';
+  background-color: var(--dark);
+  height: 2px;
+  width: 50%;
+  bottom: 0;
+  transform: translateY(3px);
+  transition: all .3s;
+}
+
+.contact__me a:hover::before{
+  width: 100%;
+  background-color: var(--primary);
+}
+
 /* ====
 
    Large screen style: for screen from 992px
@@ -1247,7 +1411,7 @@ height: 45px;
   }
 
   .hero__title--name{
-    font-size: 10rem;
+    font-size: 12vw;
     line-height: 1;
   }
 
@@ -1420,6 +1584,13 @@ height: 45px;
 
 
 @media screen and (max-width:991px){
+
+  .preloader__text span{
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 200;
+    letter-spacing: .5rem;
+   }
 
  .conainer{
    margin: auto 15px
@@ -1600,8 +1771,8 @@ margin: 0 10px;
 }
 .bg-notepad{
   background-size: 55vw;
-  top: 40%;
-  right: 0;
+  top: 44%;
+  right: -100px;
   width: 55vw;
   height: 78vw;
 }
