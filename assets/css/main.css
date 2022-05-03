@@ -483,6 +483,7 @@ display: block;
   cursor: url("../img/portfolio-1.jpeg");
 
 }
+
 .hero__title--name{
   font-weight: 900;
   color: transparent;
@@ -968,6 +969,26 @@ height: auto;
   display: flex;
 }
 
+.testimonials__img {
+  background-size: 25vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  z-index: 2;
+  height: 28vw;
+  position: relative;
+}
+ .testimonials__img::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(234,234,235);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 8%, rgba(0,212,255,0) 30%);
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+}
 .testimonials__intro, .testimonials__img, .testimonial{
   flex: 0 1 33.333%;
 }
@@ -996,25 +1017,7 @@ height: auto;
   font-weight: 600;
   color: var(--dark);
 }
-.testimonials__img img{
-max-height: 500px;
-width: auto;
-z-index: 2;
-display: inline-block;
-}
-.testimonials__img{
-  position: relative;
-}
-.testimonials__img img::before{
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-image:linear-gradient(to top, rgba(197, 60, 60, 0.815), rgba(255, 255, 255, 0));
-  z-index: 3;
-  top: 0;
-  bottom: 0;
-}
+
 
 .testimonial .company__name{
   font-weight: 600;
@@ -2012,11 +2015,6 @@ margin-bottom: 3.2rem;
   text-align: center;
 }
 
-
-.testimonials__img img {
-  max-height: 500px;
-  width: 100%;
-}
 
 .companies__box .company {
   padding: 2rem;
