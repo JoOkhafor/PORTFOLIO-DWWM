@@ -392,7 +392,7 @@ header{
 .navbar__mobileMenu a{
     display: block;
     text-decoration: none;
-    padding: 15px; 
+    padding: 12px; 
     transition: all .5s;
     
 }
@@ -565,7 +565,9 @@ line-height: 1.6rem;
     }
 
 
-
+    .hero__bottom--nav{
+      z-index: 33;
+    }
 
 .hero__bottom--nav .link__unerdline{
   display: inline-block;
@@ -1390,7 +1392,7 @@ height: 45px;
   .hero{
     background-color:#FBEDE9;
     width: 92%;
-    min-height: calc(100vh - (80px + 2rem));
+    min-height: calc(100vh - (73px + 2rem));
     display: flex ;
     flex-direction: row;
     justify-content: space-between;
@@ -1665,7 +1667,7 @@ height: 45px;
 }
 
 .mobileMennu__links a{
-font-size: 3.5rem;
+font-size: 12vw;
 line-height: 1;
 font-weight: 900;
 color: transparent;
@@ -2187,7 +2189,13 @@ display: none;
 }
 
 @media screen and (max-width:580px) {
+  .hero__intro a {
+    font-size: 4vw;
+}
 
+.hero__bottom--navlink {
+   font-size: 1rem;
+}
   .skills .title {
     float: right;
     margin-bottom: 1.2rem;
