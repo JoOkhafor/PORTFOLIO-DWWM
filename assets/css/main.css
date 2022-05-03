@@ -1661,7 +1661,7 @@ height: 45px;
 
    .mobileMennu__links {
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -1685,7 +1685,7 @@ color: transparent;
 
 .mobileMenu__footer {
   position: absolute;
-  bottom: -50%;
+  bottom: -80%;
   width: 100%;
   text-align: center;
 }
