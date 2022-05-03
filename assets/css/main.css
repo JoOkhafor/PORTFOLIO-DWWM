@@ -483,7 +483,6 @@ display: block;
   cursor: url("../img/portfolio-1.jpeg");
 
 }
-
 .hero__title--name{
   font-weight: 900;
   color: transparent;
@@ -957,7 +956,17 @@ height: auto;
 .box-down{
   transform: translateY(50%);
 }
-
+.testimonials__img::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgb(234,234,235);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 8%, rgba(0,212,255,0) 30%);
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+}
 .testimonials{
   padding: 5rem 0;
   position: relative;
@@ -969,28 +978,8 @@ height: auto;
   display: flex;
 }
 
-.testimonials__img {
-  background-size: 25vw;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  z-index: 2;
-  height: 28vw;
-  position: relative;
-}
- .testimonials__img::before {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: rgb(234,234,235);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 8%, rgba(0,212,255,0) 30%);
-    z-index: 3;
-    top: 0;
-    bottom: 0;
-}
-.testimonials__intro, .testimonials__img, .testimonial{
-  flex: 0 1 33.333%;
+.testimonials__intro, .testimonial{
+  flex: 0 1 99%;
 }
 
 .testimonials__intro{
@@ -1002,6 +991,14 @@ height: auto;
 }
 .testimonials__img{
    align-self: stretch;
+}
+
+.testimonials__img {
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  z-index: 2;
+  position: relative;
 }
 .testimonial{
    align-self: center;
@@ -1017,7 +1014,25 @@ height: auto;
   font-weight: 600;
   color: var(--dark);
 }
-
+.testimonials__img img{
+max-height: 500px;
+width: auto;
+z-index: 2;
+display: inline-block;
+}
+.testimonials__img{
+  position: relative;
+}
+.testimonials__img img::before{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image:linear-gradient(to top, rgba(197, 60, 60, 0.815), rgba(255, 255, 255, 0));
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+}
 
 .testimonial .company__name{
   font-weight: 600;
@@ -1339,7 +1354,18 @@ height: 45px;
   .menu__nav{
     margin-right: 2rem;
   }
-
+  .hero__image::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(234,234,235);
+    background: linear-gradient(0deg, rgb(251 236 233) 0%, rgb(251 236 233) 15%, rgb(251 236 233 / 0%) 30%);
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    transform: translateY(32%);
+}
   .navbar__top .navbar__top--button{
     background-color: var(--primary);
     color: var(--white);
@@ -1560,6 +1586,10 @@ height: 45px;
     align-self: center;
     padding-left: 3rem;
  }
+ .testimonials__img {
+  background-size: 25vw;
+  height: 28vw;
+}
 
  .companies__box .company{
   height: 150px;
@@ -1594,7 +1624,18 @@ height: 45px;
     font-weight: 200;
     letter-spacing: .5rem;
    }
-
+   .hero__image::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(234,234,235);
+    background: linear-gradient(0deg, rgb(243 191 191) 0%, rgb(243 191 191) 1%, rgb(243 191 191 / 0%) 20%);
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    transform: translateY(1%);
+}
  .conainer{
    margin: auto 15px
  }
@@ -2016,6 +2057,27 @@ margin-bottom: 3.2rem;
 }
 
 
+.testimonials__img img {
+  max-height: 500px;
+  width: 100%;
+}
+
+.testimonials__img {
+  background-size: 70vw;
+  height: 80vw;
+}
+
+ .testimonials__img::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(234,234,235);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 8%, rgba(0,212,255,0) 30%);
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+}
 .companies__box .company {
   padding: 2rem;
   border: 1px solid black;
